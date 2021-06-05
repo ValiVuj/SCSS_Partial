@@ -1,0 +1,7 @@
+$color-primary: white;
+$color-secondary: grey;
+$color-background-darkish: darken($color-secondary, 30%);
+$color-tertiary: rgba(255, 0, 0, 0.493);
+$color-background-lighter:darken($color-tertiary, 20%);
+$color-quaternay:rgba(165, 136, 42, 0.575);
+$color-background-lightest:darken($color-quaternay,15%);

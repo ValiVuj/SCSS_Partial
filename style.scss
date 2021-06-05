@@ -1,0 +1,72 @@
+@import "./abstract/mixins";
+@import "./base/colors";
+@import "./base/reset";
+
+@keyframes waterfall {
+    from {
+        transform: translateY(-800px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+body {
+    background: url(./blur-clean.jpg) center/ cover no-repeat;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.rectangle1 {
+    @include border;
+    @include center;
+    background: $color-background-darkish;
+    width:25%;
+    height:300px;
+    animation: waterfall 1.5s ease-in-out;
+}  
+.rectangle2 {
+    @include border;
+    @include center;
+    background: $color-background-lighter;
+    width: 25%;
+    height:300px;
+    animation: waterfall 3s ease-in-out;
+} 
+.rectangle3 {
+    @include border;
+    @include center;
+    background: $color-background-lightest;
+    width: 25%;
+    height:300px;
+    animation: waterfall 4.5s ease-in-out;
+}
+p {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: $color-primary;
+    font-size: 125px;
+}
+
+@media screen and (max-width: 600px) {
+     .rectangle1, .rectangle2, .rectangle3 {
+        flex-basis: 100%;
+        margin: 4px;
+    }
+}
+@media screen and (min-width: 601px ) and (max-width: 1200px)  {
+    .rectangle1, .rectangle2, .rectangle3 {
+        flex-basis: calc ( 33% -3 * 16px);
+        margin: 8px;
+    }
+}
+@media screen and (min-width: 1201px)  {
+    .rectangle1, .rectangle2, .rectangle3 {
+        flex-basis: calc ( 25% -3 * 16px);
+        margin: 16px;
+    }
+}

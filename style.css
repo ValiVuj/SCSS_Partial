@@ -1,0 +1,135 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@-webkit-keyframes waterfall {
+  from {
+    -webkit-transform: translateY(-800px);
+            transform: translateY(-800px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes waterfall {
+  from {
+    -webkit-transform: translateY(-800px);
+            transform: translateY(-800px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+body {
+  background: url(./blur-clean.jpg) center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.rectangle1 {
+  border: 4px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #343434;
+  width: 25%;
+  height: 300px;
+  -webkit-animation: waterfall 1.5s ease-in-out;
+          animation: waterfall 1.5s ease-in-out;
+}
+
+.rectangle2 {
+  border: 4px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(153, 0, 0, 0.493);
+  width: 25%;
+  height: 300px;
+  -webkit-animation: waterfall 3s ease-in-out;
+          animation: waterfall 3s ease-in-out;
+}
+
+.rectangle3 {
+  border: 4px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(104, 86, 26, 0.575);
+  width: 25%;
+  height: 300px;
+  -webkit-animation: waterfall 4.5s ease-in-out;
+          animation: waterfall 4.5s ease-in-out;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 125px;
+}
+
+@media screen and (max-width: 600px) {
+  .rectangle1, .rectangle2, .rectangle3 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 4px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .rectangle1, .rectangle2, .rectangle3 {
+    -ms-flex-preferred-size: calc 33% -48px;
+        flex-basis: calc 33% -48px;
+    margin: 8px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .rectangle1, .rectangle2, .rectangle3 {
+    -ms-flex-preferred-size: calc 25% -48px;
+        flex-basis: calc 25% -48px;
+    margin: 16px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
